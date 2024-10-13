@@ -31,11 +31,14 @@ const listItem = document.createElement("li");
 const img = document.createElement("img");
 
  function setMarcup(array){
+  let totalMurcup = "";
 for (const image of array) {
  const marcup = `<li class="item-picture"><img src="${image.url}" alt="${image.alt}" width="360"></li>`;
-  gallery.insertAdjacentHTML("beforeend", marcup);
-  console.log(marcup);
+  totalMurcup += marcup;
 }
+gallery.insertAdjacentHTML("beforeend", totalMurcup);
+console.log(totalMurcup);
+
  }
  setMarcup(images)
 
